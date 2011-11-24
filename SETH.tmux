@@ -23,6 +23,7 @@ send-keys -t 'work' "git state" "Enter"
 
 set-option default-path "${HOME}/sandbox/code"
 new-window -n 'code'
+send-keys -t 'code' "ls -al" "Enter"
 
 set-option default-path "${HOME}"
 new-window -n 'brew'
