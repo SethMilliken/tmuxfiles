@@ -3,10 +3,20 @@ rename-session 'scala'
 
 set-environment -g "coursera_home" "${HOME}/staging/coursera"
 set-environment -g "assignment_home" "${coursera_home}/week6-anagrams/forcomp"
+set-environment -g "play_home" "${HOME}/sandbox/code/playtest"
+set-environment -g "prioritizer_home" "${HOME}/sandbox/code/prioritizer"
 
 set-option default-path "${assignment_home}"
 new-window -n 'scratch'
 send-keys -t 'scratch' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
+
+set-option default-path "${play_home}"
+new-window -n 'playtest'
+send-keys -t 'playtest' "play \"run 9002\""
+
+set-option default-path "${prioritizer_home}"
+new-window -n 'prioritizer'
+send-keys -t 'prioritizer' "play \"run 9001\""
 
 set-option default-path "${assignment_home}"
 new-window -n 'sbt'

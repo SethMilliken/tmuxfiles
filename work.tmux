@@ -6,9 +6,9 @@ new-window -n '~'
 send-keys -t '~' "git state" "Enter"
 send-keys -t '~' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
 
-set-option default-path "${HOME}"
-new-window -n 'invalidations'
-send-keys -t 'invalidations' "(invalidate -s widget testing && invalidate testing) | tee >(pbcopy)"
+set-option default-path "${HOME}/.devtools"
+new-window -n 'ghapi'
+send-keys -t 'ghapi' "bundle exec ./ghapi" "Enter"
 
 set-option default-path "${HOME}/sandbox/code/engage"
 new-window -n 'engage'
@@ -47,6 +47,10 @@ send-keys -t 'widgets' "git state" "Enter"
 set-option default-path "${HOME}/sandbox/code/nginx"
 new-window -n 'nginx'
 send-keys -t 'nginx' "git state" "Enter"
+
+# set-option default-path "${HOME}"
+# new-window -n 'invalidations'
+# send-keys -t 'invalidations' "(invalidate -s widget testing && invalidate testing) | tee >(pbcopy)"
 
 #set-option default-path "${HOME}/bin"
 #new-window -n 'mount_vm'
