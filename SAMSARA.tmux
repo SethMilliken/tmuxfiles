@@ -26,15 +26,18 @@ new-window -n 'code'
 
 set-option default-path "${HOME}"
 new-window -n 'brew'
-send-keys -t 'brew' "brew update && brew upgrade" "Enter"
+send-keys -t 'brew' "brew update && brew upgrade && brew cleanup" "Enter"
 
 set-option default-path "${HOME}/bin"
 new-window -n 'synswitch'
 send-keys -t 'synswitch' "synswitch work"
 
 set-option default-path "${HOME}/bin"
-new-window -n 'tmux'
-send-keys -t 'tmux' "tte" "Enter"
+new-window -n 'mux'
+send-keys -t 'mux' "tte" "Enter"
+
+set-option default-path "${HOME}/sandbox/personal/zaurus/zlog"
+new-window -n 'write'
 
 #set-option default-path "${HOME}/Library/Application Support/Keymando"
 #new-window -n keymando
