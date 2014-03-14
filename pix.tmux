@@ -8,7 +8,7 @@ send-keys -t '~' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
 new-window -n 'vim' -c "${HOME}/.vim"
 send-keys -t 'vim' "git state" "Enter"
 
-new-window -n 'bin'
+new-window -n 'bin' -c "${HOME}/bin"
 send-keys -t 'bin' "git state" "Enter"
 
 new-window -n 'work' -c "${HOME}/sandbox/work/"
@@ -20,7 +20,7 @@ new-window -n 'apt-get' -c "${HOME}"
 send-keys -t 'apt-get' "sudo apt-get update && sudo apt-get dist-upgrade"
 
 new-window -n 'awe' -c "${HOME}"
-#send-keys -t 'awe' "vim .slate.js" "Enter"
+send-keys -t 'awe' "vim ~/.config/awesome/rc.lua" "Enter"
 
 #new-window -n 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
 
