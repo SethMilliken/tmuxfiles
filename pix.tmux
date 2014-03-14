@@ -17,7 +17,7 @@ new-window -n 'apt-get' -c "${HOME}"
 send-keys -t 'apt-get' "sudo apt-get update && sudo apt-get dist-upgrade"
 
 new-window -n 'awe' -c "${HOME}"
-send-keys -t 'awe' "vim ~/.config/awesome/rc.lua" "Enter"
+send-keys -t 'awe' "vim --servername awesome" "Enter"
 
 #new-window -n 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
 
@@ -25,7 +25,7 @@ send-keys -t 'awe' "vim ~/.config/awesome/rc.lua" "Enter"
 #send-keys -t 'read' "vim +Reading" "Enter"
 
 new-window -n 'mux' -c "${HOME}/.tmux"
-send-keys -t 'mux' "vim ~/.tmux/pix.tmux" "Enter"
+send-keys -t 'mux' "vim --servername tmux "Enter"
 #send-keys -t 'mux' "tte" "Enter"
 
 new-window -n '5dactyl' -c "${HOME}/.pentadactyl"
