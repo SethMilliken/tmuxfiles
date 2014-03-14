@@ -2,17 +2,14 @@
 rename-session 'work'
 
 new-window -n '~' -c "${HOME}"
-send-keys -t '~' "git state" "Enter"
+send-keys -t '~' "git world state" "Enter"
 send-keys -t '~' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
 
 new-window -n 'vim' -c "${HOME}/.vim"
-send-keys -t 'vim' "git state" "Enter"
 
 new-window -n 'bin' -c "${HOME}/bin"
-send-keys -t 'bin' "git state" "Enter"
 
 new-window -n 'work' -c "${HOME}/sandbox/work/"
-send-keys -t 'work' "git state" "Enter"
 
 #new-window -n 'code' -c "${HOME}/sandbox/code"
 
@@ -32,6 +29,5 @@ send-keys -t 'mux' "vim ~/.tmux/pix.tmux" "Enter"
 #send-keys -t 'mux' "tte" "Enter"
 
 new-window -n '5dactyl' -c "${HOME}/.pentadactyl"
-send-keys -t '5dactyl' "git state" "Enter"
 
 # vim: ft=screen
