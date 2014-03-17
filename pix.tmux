@@ -25,9 +25,9 @@ send-keys -t 'awe' "vim --servername awesome" "Enter"
 #send-keys -t 'read' "vim +Reading" "Enter"
 
 new-window -n 'mux' -c "${HOME}/.tmux"
-send-keys -t 'mux' "vim --servername tmux "Enter"
-#send-keys -t 'mux' "tte" "Enter"
+send-keys -t 'mux' "vim --servername tmux" "Enter"
 
 new-window -n '5dactyl' -c "${HOME}/.pentadactyl"
+send-keys -t '5dactyl' "vim --servername pentadactyl" "Enter"
 
 # vim: ft=screen
