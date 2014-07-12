@@ -16,7 +16,7 @@ send-keys -t 'work' "git state" "Enter"
 new-window -n 'code' -c "${HOME}/sandbox/code"
 
 new-window -n 'brew' -c "${HOME}"
-send-keys -t 'brew' "brew update && brew upgrade && brew cleanup" "Enter"
+send-keys -t 'brew' "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" "Enter"
 
 new-window -n 'slate' -c "${HOME}"
 send-keys -t 'slate' "vim .slate.js" "Enter"
