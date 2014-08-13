@@ -1,37 +1,28 @@
 # Create a ready-to-go tmux session
-rename-session 'standard'
+new-session -A -s 'standard'
 
-set-option default-path "${HOME}"
-new-window -n '~'
+new-window -n '~' -c  "${HOME}"
 send-keys -t '~' "git state" "Enter"
 send-keys -t '~' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
 
-set-option default-path "${HOME}/.vim"
-new-window -n '.vim'
-send-keys -t '.vim' "git state" "Enter"
+new-window -n 'vim' -c  "${HOME}/.vim"
+send-keys -t 'vim' "git state" "Enter"
+send-keys -t 'vim' "vim +\"let g:vim_app_name='vim'\"" "Enter"
 
-set-option default-path "${HOME}/bin"
-new-window -n 'bin'
+new-window -n 'bin' -c  "${HOME}/bin"
 send-keys -t 'bin' "git state" "Enter"
 
-set-option default-path "${HOME}/.pentadactyl"
-new-window -n '5dactyl'
+new-window -n '5dactyl' -c  "${HOME}/.pentadactyl"
 send-keys -t '5dactyl' "git state" "Enter"
 
-set-option default-path "${HOME}"
-new-window -n 'brew'
-send-keys -t 'brew' "brew update && brew upgrade && brew cleanup" "Enter"
+new-window -n 'brew' -c  "${HOME}"
+send-keys -t 'brew' "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" "Enter"
 
-set-option default-path "${HOME}/bin"
-new-window -n 'synswitch'
-send-keys -t 'synswitch' "synswitch work"
+new-window -n 'mux' -c  "${HOME}/.tmux"
+send-keys -t 'vim' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
 
-set-option default-path "${HOME}/.tmux"
-new-window -n 'mux'
-send-keys -t 'mux' "tte" "Enter"
+new-window -n 'slate' -c  "${HOME}"
+send-keys -t 'slate' "vim +\"let g:vim_app_name='slate'\"" "Enter"
 
-set-option default-path "${HOME}"
-new-window -n 'slate'
-send-keys -t 'slate' "vim .slate.js" "Enter"
 
 # vim: ft=tmux
