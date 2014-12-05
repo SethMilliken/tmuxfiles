@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-new-session -A -s 'standard'
+new-session -A -s 'main'
 
 new-window -n '~' -c  "${HOME}"
 send-keys -t '~' "git state" "Enter"
@@ -16,10 +16,10 @@ new-window -n '5dactyl' -c  "${HOME}/.pentadactyl"
 send-keys -t '5dactyl' "git state" "Enter"
 
 new-window -n 'brew' -c  "${HOME}"
-send-keys -t 'brew' "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" "Enter"
+send-keys -t 'brew' "brew update && brew upgrade && brew cleanup && brew cask cleanup" "Enter"
 
 new-window -n 'mux' -c  "${HOME}/.tmux"
-send-keys -t 'vim' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
+send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
 
 new-window -n 'slate' -c  "${HOME}"
 send-keys -t 'slate' "vim +\"let g:vim_app_name='slate'\"" "Enter"
