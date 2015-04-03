@@ -1,4 +1,6 @@
 # Create a ready-to-go tmux session
+source-file "${HOME}/.tmux.conf"
+
 new-session -A -s 'ua'
 
 set-option default-path "${HOME}"
