@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-rename-session 'work'
+new-session -s 'work'
 
 new-window -n '~' -c "${HOME}"
 send-keys -t '~' "git world state" "Enter"

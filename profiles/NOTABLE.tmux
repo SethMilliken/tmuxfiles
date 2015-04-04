@@ -1,4 +1,5 @@
 # Create a ready-to-go tmux session
+new-session -s 'main'
 
 set-option default-path "${HOME}"
 new-window -n '~'
@@ -25,10 +26,12 @@ set-option default-path "${HOME}"
 new-window -n 'brew'
 send-keys -t 'brew' "brew update && brew upgrade" "Enter"
 
-set-option default-path "${HOME}/bin"
-new-window -n 'tmux'
-send-keys -t 'tmux' "tte" "Enter"
+set-option default-path "${HOME}/.tmux"
+new-window -n 'mux'
+send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
 
 set-option default-path "${HOME}"
+
+set-option -g monitor-activity on
 
 # vim: ft=tmux

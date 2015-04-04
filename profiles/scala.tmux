@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-rename-session 'scala'
+new-session -s 'scala'
 
 set-environment "HOME" "${HOME}"
 set-environment "coursera_home" "${HOME}/staging/coursera"

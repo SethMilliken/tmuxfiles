@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-rename-session 'araxia.net
+new-session -s 'araxia.net
 
 set-option default-path "${HOME}"
 new-window -n '~'

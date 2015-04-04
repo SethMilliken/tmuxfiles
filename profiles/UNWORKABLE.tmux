@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-new-session -A -s 'main'
+new-session -s 'main'
 
 set-option default-path "${HOME}"
 new-window -n '~'

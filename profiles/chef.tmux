@@ -1,5 +1,5 @@
 # Create a ready-to-go tmux session
-new-session -A -s 'chef'
+new-session -s 'chef'
 
 new-window -n '~' -c  "${HOME}"
 send-keys -t '~' "git state" "Enter"
