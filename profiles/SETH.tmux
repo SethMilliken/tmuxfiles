@@ -13,7 +13,7 @@ new-window -n 'bin' -c  "${HOME}/bin"
 send-keys -t 'bin' "git state" "Enter"
 
 new-window -n '5dactyl' -c  "${HOME}/.pentadactyl"
-send-keys -t '5dactyl' "git state" "Enter"
+send-keys -t '5dactyl' "vim +\"let g:vim_app_name='pentadactyl'\"" "Enter"
 
 new-window -n 'brew' -c  "${HOME}"
 send-keys -t 'brew' "brew update && brew upgrade && brew cleanup && brew cask cleanup" "Enter"
