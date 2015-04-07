@@ -17,10 +17,10 @@ send-keys -t 'work' "git state" "Enter"
 new-window -n 'code' -c "${HOME}/sandbox/code"
 
 new-window -n 'brew' -c "${HOME}"
-send-keys -t 'brew' "brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup" "Enter"
+send-keys -t 'brew' "brew update && brew upgrade && brew cleanup && brew cask cleanup" "Enter"
 
 new-window -n 'slate' -c "${HOME}"
-send-keys -t 'slate' "vim .slate.js" "Enter"
+send-keys -t 'slate' "vim +'let g:vim_app_name=\"slate\"'" "Enter"
 
 new-window -n 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
 
@@ -28,10 +28,10 @@ new-window -n 'read' -c "${HOME}/sandbox/personal/zaurus/zlog"
 send-keys -t 'read' "vim +Reading" "Enter"
 
 new-window -n 'mux' -c "${HOME}/bin"
-send-keys -t 'mux' "tte" "Enter"
+send-keys -t 'mux' "vim +'let g:vim_app_name=\"tmux\"'" "Enter"
 
 new-window -n '5dactyl' -c "${HOME}/.pentadactyl"
-send-keys -t '5dactyl' "git state" "Enter"
+send-keys -t '5dactyl' "vim +'let g:vim_app_name=\"pentadactyl\"'" "Enter"
 
 #new-window -n 'synswitch' -c "${HOME}/bin"
 #send-keys -t 'synswitch' "synswitch work"
