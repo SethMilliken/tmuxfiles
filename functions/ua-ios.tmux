@@ -1,3 +1,3 @@
-send-keys -t ua:2 C-s 4 
+send-keys -t ua:1 C-s 4 
 switch-client -t ua 
-select-window -t 2
+select-window -t 1

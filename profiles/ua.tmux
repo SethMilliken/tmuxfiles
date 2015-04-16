@@ -12,17 +12,18 @@ resize-pane -t weechat.0 -y 10
 
 set-option default-path "${HOME}/.weechat/"
 new-window -n 'configs'
-send-keys -t 'configs' "vim weechat.conf irc.conf plugins.conf" "Enter"
+send-keys -t 'configs' "vim +\"let g:vim_app_name='weechat'\"" "Enter"
 
-set-option default-path "${HOME}/.tmux"
-new-window -n 'mux'
-send-keys -t 'mux' "tmux link-window -s main:mux" "Enter"
+
+#set-option default-path "${HOME}/.tmux"
+#new-window -n 'mux'
+#send-keys -t 'mux' "tmux link-window -s main:mux" "Enter"
 
 set-option default-path "${HOME}/.weechat/logs/"
 new-window -n 'logs'
-send-keys -t 'logs' "less irc.dev-ua.\#\#ops.weechatlog" "Enter"
+send-keys -t 'logs' "less irc.dev-ua.\\\#\\\#ops.weechatlog" "Enter"
 split-window -t 'logs'
-send-keys -t 'logs' "less irc.dev-ua.\#ops.weechatlog" "Enter"
+send-keys -t 'logs' "less irc.dev-ua.\\\#ops.weechatlog" "Enter"
 
 set-option default-path "${HOME}"
 
