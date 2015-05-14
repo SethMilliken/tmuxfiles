@@ -27,7 +27,7 @@ new-window -n 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
 new-window -n 'read' -c "${HOME}/sandbox/personal/zaurus/zlog"
 send-keys -t 'read' "vim +Reading" "Enter"
 
-new-window -n 'mux' -c "${HOME}/bin"
+new-window -n 'mux' -c "${HOME}/.tmux/"
 send-keys -t 'mux' "vim +'let g:vim_app_name=\"tmux\"'" "Enter"
 
 new-window -n '5dactyl' -c "${HOME}/.pentadactyl"
