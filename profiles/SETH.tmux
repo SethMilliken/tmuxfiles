@@ -24,5 +24,4 @@ send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
 new-window -n 'slate' -c  "${HOME}"
 send-keys -t 'slate' "vim +\"let g:vim_app_name='slate'\"" "Enter"
 
-
 # vim: ft=tmux
