@@ -10,8 +10,6 @@ send-keys -t 'chef' "git state" "Enter"
 
 new-window -n 'vagrant' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
 send-keys -t 'vagrant' "vagrant up"
-split-window -h
-send-keys -t 'vagrant' "./chef_it.sh"
 
 new-window -n 'ssh' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
 send-keys -t 'ssh' "vagrant ssh"
@@ -19,9 +17,6 @@ send-keys -t 'ssh' "vagrant ssh"
 new-window -n 'init' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
 send-keys -t 'init' "./init.sh"
 
-new-window -n 'jobs' -c "${HOME}/stage/jenkins/jobs"
-send-keys -t '.0' "grep ':' plugin_report.txt | sed -e 's/://' | sort | pbcopy"
-split-window -h
-send-keys -t '.1' "vim plugin_report.txt"
+new-window -n 'code' -c "${HOME}/sandbox/code/"
 
 # vim: ft=tmux
