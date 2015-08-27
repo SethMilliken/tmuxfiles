@@ -4,6 +4,7 @@ set-option -g status-bg black
 set-option -g status-fg white
 set-option -g status-left-length 30
 run-shell "tmux set-option -g status-left '#[fg=white]#[bg=blue] $tmux_host #[default]'"
+if-shell '[[ "$(tmux -V)" == "tmux 1.6" ]]' "set-option -g status-left '#[fg=white]#[bg=blue] #(hostname) #[default]'"
 
 set-window-option -g clock-mode-style 24
 set-window-option -g clock-mode-colour white
