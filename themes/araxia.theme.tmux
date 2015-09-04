@@ -4,7 +4,6 @@ set-option -g status-bg black
 set-option -g status-fg white
 set-option -g status-left-length 30
 run-shell "tmux set-option -g status-left '#[fg=white]#[bg=blue] $tmux_host #[default]'"
-if-shell '[[ "$(tmux -V)" == "tmux 1.6" ]]' "set-option -g status-left '#[fg=white]#[bg=blue] #(hostname) #[default]'"
 
 set-window-option -g clock-mode-style 24
 set-window-option -g clock-mode-colour white
@@ -16,3 +15,5 @@ set-window-option -g window-status-format "#I #W #[fg=blue]|#[default]"
 set-option -g set-titles on
 set-option -g set-titles-string "(#I:#P) #W"
 set-option -g status-right '#[fg=white]%a, %Y-%m-%d, %H:%M#[default] [ #[fg=green]#S#[default] ]'
+
+if-shell '[[ "$(tmux -V)" == "tmux 1.6" ]]' "source-file ${tmux_themes_home}/simple.theme.tmux"
