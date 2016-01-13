@@ -21,7 +21,7 @@ send-keys -t 'brew' "brew update && brew upgrade && brew cleanup && brew cask cl
 new-window -n 'mux' -c  "${HOME}/.tmux"
 send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
 
-new-window -n 'slate' -c  "${HOME}"
-send-keys -t 'slate' "vim +\"let g:vim_app_name='slate'\"" "Enter"
+new-window -n 'wm' -c  "${HOME}"
+send-keys -t 'wm' "vim +\"let g:vim_app_name='wm'\"" "Enter"
 
 # vim: ft=tmux
