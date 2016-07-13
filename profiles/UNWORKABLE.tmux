@@ -27,20 +27,6 @@ send-keys -t 'vim' "vim +\"let g:vim_app_name='vim'\""
 set-option default-path "${HOME}/bin"
 new-window -n 'bin'
 
-set-option default-path "${HOME}/ax/"
-new-window -n 'notes'
-send-keys -t 'notes' "vim +\"let g:vim_app_name='notes'\"" "Enter"
-
-set-option default-path "/usr/ports"
-new-window -n 'ports'
-send-keys -t 'ports' "export PKG_PATH=ftp://mirror.planetunix.net/pub/OpenBSD/5.4/packages/`machine -a`/" "Enter"
-send-keys -t 'ports' "make search key=binutil | grep Port"
-split-window -t 'ports' -h
-send-keys -t 'ports' "export PKG_PATH=ftp://mirror.planetunix.net/pub/OpenBSD/5.4/packages/`machine -a`/" "Enter"
-send-keys -t 'ports' "sudo pkg_add -i -z -U PACKAGE"
-
-# sudo pkg_delete -i packagename
-
 set-option default-path "${HOME}/bin"
 new-window -n 'mux'
 send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
