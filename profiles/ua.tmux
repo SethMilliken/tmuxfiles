@@ -21,7 +21,8 @@ send-keys -t 'configs' "vim +\"let g:vim_app_name='weechat'\"" "Enter"
 
 set-option default-path "${HOME}/.weechat/logs/"
 new-window -n 'logs'
-send-keys -t 'logs' "less irc.dev-ua.\\\#\\\#ops.weechatlog" "Enter"
+#send-keys -t 'logs' "less irc.dev-ua.\\\#\\\#ops.weechatlog" "Enter"
+send-keys -t 'logs' "less irc.slac-ua.\\\#wallet-eng.weechatlog" "Enter"
 split-window -t 'logs'
 send-keys -t 'logs' "less irc.dev-ua.\\\#ops.weechatlog" "Enter"
 
