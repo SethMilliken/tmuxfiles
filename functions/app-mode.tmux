@@ -1,11 +1,12 @@
-#switch-client -Tapp; display-message "app-mode"
-bind-key -tapp C "switch-client -t chef"
-bind-key -tapp C-m source-file $HOME/.tmux/functions/mux.tmux
-bind-key -tapp Escape "switch-client -T root"
-bind-key -tapp M source-file $HOME/.tmux/functions/mail.tmux
-bind-key -tapp c source-file $HOME/.tmux/functions/chat.tmux
-bind-key -tapp f "switch-client -t main"
-bind-key -tapp i source-file $HOME/.tmux/functions/ua-ios.tmux
-bind-key -tapp t source-file $HOME/.tmux/functions/todo.tmux
-bind-key -tapp u source-file $HOME/.tmux/functions/new-todo.tmux
-bind-key -tapp w source-file $HOME/.tmux/functions/write.tmux
+# Activate with: `switch-client -Tapp; display-message "app-mode"`
+# Operator pending. Mode exits after selection.
+bind-key -Tapp C switch-client -t chef
+bind-key -Tapp C-m source-file ${tmux_functions_home}/mux.tmux
+bind-key -Tapp Escape switch-client -Troot
+bind-key -Tapp M source-file ${tmux_functions_home}/mail.tmux
+bind-key -Tapp c source-file ${tmux_functions_home}/chat.tmux
+bind-key -Tapp f switch-client -t main
+bind-key -Tapp i source-file ${tmux_functions_home}/ua-ios.tmux
+bind-key -Tapp t source-file ${tmux_functions_home}/todo.tmux
+bind-key -Tapp u source-file ${tmux_functions_home}/new-todo.tmux
+bind-key -Tapp w source-file ${tmux_functions_home}/write.tmux
