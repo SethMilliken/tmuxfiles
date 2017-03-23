@@ -1,8 +1,8 @@
 # Detect and load platform-, dependency-, and host-specific configuration
 # additions and overrides.
 
-# tmux greater than 1.6
-if-shell '[[ "$(tmux -V | cut -d\ -f 2)" -gt "1.6" ]]' 'source-file "${tmux_envs_home}/modern-tmux.tmux"'
+# tmux greater than 1.6 (requires `bc`)
+if-shell '(( echo "$(tmux -V | cut -d\ -f 2) > 1.6" | bc -l ))' 'source-file "${tmux_envs_home}/modern-tmux.tmux"'
 
 # Operating System
 if-shell "[[ $(uname)    == "Darwin"  ]]" 'source-file "${tmux_envs_home}/mac.tmux"'
