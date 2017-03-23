@@ -46,7 +46,9 @@ bind-key X confirm-before -p "kill or unlink window '#W'? (y/n)" "unlink-window 
 bind-key '`' resize-pane -t 0 -y 10
 
 # Reload .tmux.conf
-bind-key R source-file ${HOME}/.tmux.conf\; display-message "Reloaded tmux configuration."
+bind-key R source-file "${tmux_conf_home}/.tmux.conf" \; display-message "Reloaded tmux configuration."
+# Reload test configuration
+bind-key C-t source-file "${tmux_functions_home}/test.tmux"
 
 # Session Management
 bind-key Q list-windows\; confirm-before -p "kill-session '#S'? (y/n)" "kill-session; send-keys 'Enter'"
@@ -87,8 +89,8 @@ unbind w
 unbind i
 
 # modes
-bind-key f switch-client -T app \; display-messsage "app-mode"
-bind-key m switch-client -T mm \; display-messsage "move-mode"
+bind-key f switch-client -T app \; display-message "app-mode"
+bind-key m switch-client -T mm \; display-message "move-mode"
 
 # renumber windows removing gaps
 #bind-key C-l move-window -r

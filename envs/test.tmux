@@ -1,4 +1,0 @@
-# Configuration for experimenting with configuration loading
-#bind-key -n C-t source-file "${tmux_conf_home}/test.conf.tmux"
-#display-message "test conf loaded"
-bind-key -n C-t source-file "${tmux_conf_home}/functions/test.tmux"

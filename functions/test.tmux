@@ -1,3 +1,5 @@
+# Configuration for experimenting with tmux configuration
+
 #display-message ${SCRIPT_RESULT}
 display-message "test.tmux function loaded"
 #display-message "#{window_id}#{pane_id}"
