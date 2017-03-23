@@ -19,6 +19,3 @@ set-window-option -g window-status-format "#I #W #[fg=blue]|#[default]"
 set-option -g set-titles on
 set-option -g set-titles-string "(#I:#P) #W"
 set-option -g status-right '#[fg=white]%a, %Y-%m-%d, %H:%M#[default] [ #[fg=green]#S#[default] ]'
-
-# TODO: fix to properly use modern_tmux env var
-if-shell '[[ -z "${modern_tmux}" ]]' "source-file ${tmux_themes_home}/simple.theme.tmux"

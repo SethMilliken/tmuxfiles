@@ -106,6 +106,6 @@ bind-key z resize-pane -Z
 source-file ${tmux_functions_home}/load-default-session.tmux
 
 # Load theme
-source-file "${tmux_themes_home}/araxia.theme.tmux"
+source-file ${tmux_functions_home}/load-default-theme.tmux
 
 # vim: ft=tmux
