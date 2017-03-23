@@ -87,9 +87,8 @@ unbind w
 unbind i
 
 # modes
-unbind-key f
-bind-key f source-file $HOME/.tmux/functions/app-mode.tmux
-bind-key m source-file $HOME/.tmux/functions/move-mode.tmux
+bind-key f switch-client -T app \; display-messsage "app-mode"
+bind-key m switch-client -T mm \; display-messsage "move-mode"
 
 # renumber windows removing gaps
 #bind-key C-l move-window -r
