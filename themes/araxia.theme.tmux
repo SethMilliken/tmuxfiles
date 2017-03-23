@@ -20,4 +20,5 @@ set-option -g set-titles on
 set-option -g set-titles-string "(#I:#P) #W"
 set-option -g status-right '#[fg=white]%a, %Y-%m-%d, %H:%M#[default] [ #[fg=green]#S#[default] ]'
 
-if-shell '[[ "$(tmux -V)" == "tmux 1.6" ]]' "source-file ${tmux_themes_home}/simple.theme.tmux"
+# TODO: fix to properly use modern_tmux env var
+if-shell '[[ -z "${modern_tmux}" ]]' "source-file ${tmux_themes_home}/simple.theme.tmux"
