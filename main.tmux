@@ -47,6 +47,8 @@ bind-key '`' resize-pane -t 0 -y 10
 
 # Reload .tmux.conf
 bind-key R source-file "${tmux_conf_home}/.tmux.conf" \; display-message "Reloaded tmux configuration."
+# Silent reload .tmux.conf (debug)
+bind-key C-r source-file "${tmux_conf_home}/.tmux.conf"
 # Reload test configuration
 bind-key C-t source-file "${tmux_functions_home}/test.tmux"
 
