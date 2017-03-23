@@ -1,0 +1,1 @@
+switch-client -t main
