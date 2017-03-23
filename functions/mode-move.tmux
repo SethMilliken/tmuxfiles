@@ -1,7 +1,5 @@
-# Activate with: `switch-client -T mm ; display-message "move-mode"`
-# Recursive. Mode stays active until Escape.
-bind-key -T mm h select-pane -L \; switch-client -T mm \; display-message "move-mode"
-bind-key -T mm j select-pane -U \; switch-client -T mm \; display-message "move-mode"
-bind-key -T mm k select-pane -D \; switch-client -T mm \; display-message "move-mode"
-bind-key -T mm l select-pane -R \; switch-client -T mm \; display-message "move-mode"
-bind-key -T mm Escape switch-client -T root
+# Mode for navigating panes
+# Mode stays active until Escape.
+set-environment -g tmux_mode_name "PANEMOVE"
+source-file "${tmux_functions_home}/_mode-set.tmux"
+switch-client -T mm
