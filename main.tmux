@@ -89,12 +89,16 @@ set-option -g focus-events on
 unbind t
 unbind w
 unbind i
+unbind s
 
 # modes
-unbind s
-bind-key s source-file "${tmux_functions_home}/mode-app.tmux"
+bind-key f source-file "${tmux_functions_home}/mode-app.tmux"
 bind-key m source-file "${tmux_functions_home}/mode-move.tmux"
 
+bind-key i setenv -g tmux_function_selection 'todo' \; source "${tmux_functions_home}/mode-app-select.tmux"
+bind-key t setenv -g tmux_function_selection 'new-todo' \; source "${tmux_functions_home}/mode-app-select.tmux"
+bind-key s setenv -g tmux_function_selection 'mux' \; source "${tmux_functions_home}/mode-app-select.tmux"
+#bind-key s setenv -g tmux_function_selection 'swap-app' \; source "${tmux_functions_home}/mode-app-select.tmux"
 # renumber windows removing gaps
 #bind-key C-l move-window -r
 
