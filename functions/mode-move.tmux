@@ -1,5 +1,5 @@
 # Mode for navigating panes
 # Mode stays active until Escape.
-set-environment -g tmux_mode_name "PANEMOVE"
-source-file "${tmux_functions_home}/_mode-set.tmux"
+set -g @tmux_mode " PANEMOVE "
+refresh-client -S
 switch-client -T mm

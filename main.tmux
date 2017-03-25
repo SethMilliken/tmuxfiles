@@ -7,7 +7,7 @@
 unbind C-b
 set-option -g prefix C-a
 
-bind-key C-a last-window
+bind-key C-a last-window \; set -guq @tmux_mode
 
 # allow <C-a>a to pass through an actual <C-a>
 bind-key a send-prefix
