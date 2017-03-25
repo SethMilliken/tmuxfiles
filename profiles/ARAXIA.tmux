@@ -24,6 +24,8 @@ send-keys -t 'install' "sudo apt-get install "
 
 new-window -n 'bin' -c "${HOME}/bin"
 
+new-window -n 'git' -c "${HOME}/git"
+
 new-window -n 'mux' -c "${HOME}/.tmux"
 send-keys -t 'mux' "vap tmux" "Enter"
 

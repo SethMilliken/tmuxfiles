@@ -1,3 +1,3 @@
 switch-client -t write
 select-window -t write
-select-pane -t 0
+select-pane -t 1

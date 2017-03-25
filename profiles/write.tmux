@@ -1,14 +1,24 @@
-set-option default-path "${HOME}/sandbox/personal/zaurus/zlog"
-
-new-session -s "write" -n '~'
+# Writing session
+new-session -s "write" -n '~' -c "${HOME}/sandbox/personal/"
 
 new-window -n 'commit'
 send-keys -t 'commit' "pushit"
 
 new-window -n 'write'
-send-keys -t 'write' "vim +\"let g:vim_app_name='write'\"" "Enter"
+split-window -t 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
+send-keys -t 'write.0' "tail chat here"
+send-keys -t 'write.1' "vap write" "Enter"
+resize-pane -t 'write.1' -Z
 
-link-window -s main:2
+new-window -n 'read'
+split-window -t 'read' -c "${HOME}/sandbox/personal/zaurus/zlog"
+send-keys -t 'read' "vap read" "Enter"
+
+new-window -n 'scratch'
+send-keys -t 'scratch' "vap scratch" "Enter"
+
+new-window -n 'qrith'
+send-keys -t 'qrith' "vap qrith" "Enter"
 
 set-option -g monitor-activity on
 
