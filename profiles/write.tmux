@@ -20,6 +20,9 @@ send-keys -t 'scratch' "vap scratch" "Enter"
 new-window -n 'qrith'
 send-keys -t 'qrith' "vap qrith" "Enter"
 
+new-window -n 'mtg'
+send-keys -t 'mtg' "export PS1=mtg$\ ; workon mtg" "Enter"
+
 set-option -g monitor-activity on
 
 # vim: ft=tmux
