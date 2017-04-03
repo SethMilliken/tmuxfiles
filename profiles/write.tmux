@@ -6,7 +6,7 @@ send-keys -t 'commit' "pushit"
 
 new-window -n 'write'
 split-window -t 'write' -c "${HOME}/sandbox/personal/zaurus/zlog"
-send-keys -t 'write.0' "tail chat here"
+send-keys -t 'write.0' "/bin/less +F ${HOME}/.weechat_personal/logs/irc.bitlbee.tadhg.weechatlog" "Enter"
 send-keys -t 'write.1' "vap write" "Enter"
 resize-pane -t 'write.1' -Z
 
