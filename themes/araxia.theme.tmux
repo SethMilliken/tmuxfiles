@@ -1,4 +1,4 @@
-set-option -g status-utf8 on
+#set-option -g status-utf8 on
 set-option -g status-interval 60
 set-option -g status-bg black
 set-option -g status-fg white

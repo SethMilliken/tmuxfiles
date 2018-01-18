@@ -8,13 +8,13 @@ send-keys -t '~' "sleep 4; tmux set-option -g monitor-activity on" "Enter"
 new-window -n 'chef' -c "${HOME}/sandbox/code/chef_configs"
 send-keys -t 'chef' "git state" "Enter"
 
-new-window -n 'vagrant' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
+new-window -n 'vagrant' -c "${HOME}/sandbox/code/vagrant-configs/centos_6"
 send-keys -t 'vagrant' "vagrant up"
 
-new-window -n 'ssh' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
+new-window -n 'ssh' -c "${HOME}/sandbox/code/vagrant-configs/centos_6"
 send-keys -t 'ssh' "vagrant ssh"
 
-new-window -n 'init' -c "${HOME}/sandbox/code/vagrant-configs/jenkins"
+new-window -n 'init' -c "${HOME}/sandbox/code/vagrant-configs/centos_6"
 send-keys -t 'init' "./init.sh"
 
 new-window -n 'code' -c "${HOME}/sandbox/code/"

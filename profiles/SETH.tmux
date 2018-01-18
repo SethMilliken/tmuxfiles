@@ -15,7 +15,7 @@ new-window -n '5dactyl' -c  "${HOME}/.pentadactyl"
 send-keys -t '5dactyl' "vim +\"let g:vim_app_name='pentadactyl'\"" "Enter"
 
 new-window -n 'brew' -c  "/usr/local/Cellar"
-send-keys -t 'brew' "brew update && brew upgrade && brew cleanup && brew cask cleanup" "Enter"
+send-keys -t 'brew' "brewup" "Enter"
 
 new-window -n 'mux' -c  "${HOME}/.tmux"
 send-keys -t 'mux' "vim +\"let g:vim_app_name='tmux'\"" "Enter"
