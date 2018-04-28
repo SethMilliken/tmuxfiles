@@ -1,4 +1,4 @@
-switch-client -t main
+switch-client -t mail
 select-window -t mail
-select-pane -t 0
+select-pane -t 1
 send-keys "Gjxm"
