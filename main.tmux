@@ -43,7 +43,7 @@ unbind x
 bind-key x confirm-before -p "kill pane '#W.#P'? (y/n)" "kill-pane"
 bind-key X confirm-before -p "kill or unlink window '#W'? (y/n)" "unlink-window -k"
 
-bind-key '`' resize-pane -t 0 -y 10
+bind-key '`' resize-pane -t 0 -y 5 \; resize-pane -t 2 -y 5
 
 # Reload .tmux.conf
 bind-key R source-file "${tmux_conf_home}/.tmux.conf" \; display-message "Reloaded tmux configuration."
