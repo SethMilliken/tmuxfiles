@@ -8,8 +8,8 @@ send-keys -t 'mail' "mutt" "Enter"
 new-window -n 'weechat' -c "${HOME}/.weechat_personal"
 split-window -t 'weechat'
 split-window -h -t 'weechat.0'
-send-keys -t 'weechat.0' "/usr/bin/less +F ${HOME}/.weechat/logs/irc.dev-ua.\\\#ops.weechatlog"
-send-keys -t 'weechat.1' "/usr/bin/less +F ${HOME}/.weechat/logs/irc.dev-ua.\\\#\\\#ops.weechatlog"
+send-keys -t 'weechat.0' "chatail ua \\\#channel-reach" "Enter"
+send-keys -t 'weechat.1' "chatail ua \\\&reach-team" "Enter"
 send-keys -t 'weechat.2' "weechat -d ."
 select-layout a061,425x139,0,0[425x7,0,0{212x7,0,0,212x7,213,0},425x131,0,8]
 
