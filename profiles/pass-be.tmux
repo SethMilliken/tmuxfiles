@@ -18,7 +18,7 @@ send-keys -t 'webenv' "git up" "Enter"
 select-pane -t ':webenv.0'
 
 new-window -n 'docker' -c "${HOME}/sandbox/code/pass-be2/dev/docker/"
-send-keys -t 'docker' "docker-compose up" "Enter"
+send-keys -t 'docker' "docker-compose up  # these services should now be provided by webenv"
 
 new-window -n 'pass-sql' -c "${HOME}/sandbox/code/passtools-sql"
 
