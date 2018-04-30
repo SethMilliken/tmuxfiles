@@ -6,6 +6,7 @@
 # to ensure that `-gt` still works when `tmux -V 2>/dev/null` returns
 # an empty string for those versions.
 if-shell '[ "$(echo 1$(tmux -V 2>/dev/null) | sed -e \'s/tmux //\' | sed -e \'s/\.//\') -gt 116 ]' 'source-file "${tmux_envs_home}/modern-tmux.tmux"'
+if-shell '[ "$(echo 1$(tmux -V 2>/dev/null) | sed -e \'s/tmux //\' | sed -e \'s/\.//\') -gt 118 ]' 'source-file "${tmux_envs_home}/tmux-18.tmux"'
 
 # Operating System
 if-shell '[    "$(uname)"=="Darwin"  ' 'source-file "${tmux_envs_home}/mac.tmux"'
