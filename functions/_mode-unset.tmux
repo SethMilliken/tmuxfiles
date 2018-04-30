@@ -1,10 +1,10 @@
 # Exit from mode
 
 # Restore default key table
-switch-client -T root
+if-shell '[ -n "$(tmux show -gq @tmux_18 2>/dev/null)" ]' 'switch-client -T root'
 
 # Unset variables
-set -guq @tmux_mode
+if-shell '[ -n "$(tmux show -gq @tmux_18 2>/dev/null)" ]' 'set -guq @tmux_mode'
 set-env -gu tmux_key_table
 
 # Update status line

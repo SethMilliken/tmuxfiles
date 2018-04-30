@@ -7,7 +7,7 @@
 unbind C-b
 set-option -g prefix C-a
 
-bind-key C-a last-window \; set -guq @tmux_mode
+bind-key C-a last-window \; source-file "${tmux_functions_home}/_mode-unset.tmux"
 
 # allow <C-a>a to pass through an actual <C-a>
 bind-key a send-prefix
